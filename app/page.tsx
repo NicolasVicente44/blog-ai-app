@@ -1,16 +1,28 @@
 import Trending from "app/(home)/Trending";
+import Tech from "app/(home)/Tech";
+import Travel from "app/(home)/Travel";
+import Other from "app/(shared)/Other";
+import Subscribe from "app/(shared)/Subscribe";
+import Sidebar from "app/(shared)/Sidebar";
+import { Post } from "@prisma/client";
 
-export default function Home() {
+
+
+export default async function Home() {
   return (
     <main className="px-10 leading-7">
       <Trending />
       <div className="md:flex gap-10 mb-5">
         <div className="basis-3/4">
-          {/* <Tech />
+          <Tech />
           <Travel />
-          <Other /> */}
-          <div className="hidden md:block">{/* <Subscribe /> */}</div>
-          <div className="basis-1/4">{/* <Sidebar /> */}</div>
+          <Other />
+          <div className="hidden md:block">
+            <Subscribe />
+          </div>
+          <div className="basis-1/4">
+            <Sidebar />
+          </div>
         </div>
       </div>
     </main>
